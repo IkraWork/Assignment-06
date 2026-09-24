@@ -40,8 +40,11 @@ export function WorkoutProvider({ children }: { children: React.ReactNode }) {
   useEffect(() => {
     const storedPlan = localStorage.getItem("fitlog_plan");
     const storedSaved = localStorage.getItem("fitlog_saved");
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     if (storedPlan) setPlan(JSON.parse(storedPlan));
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     if (storedSaved) setSaved(JSON.parse(storedSaved));
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     setIsLoaded(true);
   }, []);
 

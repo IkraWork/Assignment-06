@@ -17,6 +17,7 @@ function MyPlanContent() {
   const [isMounted, setIsMounted] = useState(false);
 
   useEffect(() => {
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     setIsMounted(true);
     const tab = searchParams.get("tab");
     if (tab === "saved") {
@@ -97,7 +98,7 @@ function MyPlanContent() {
           onClick={() => setActiveTab("plan")}
           className={`px-6 py-4 font-bold tracking-wide uppercase transition-colors border-b-2 ${activeTab === "plan" ? "border-accent text-accent" : "border-transparent text-neutral-500 hover:text-neutral-300"}`}
         >
-          Today's Plan ({plan.length})
+          Today&apos;s Plan ({plan.length})
         </button>
         <button 
           onClick={() => setActiveTab("saved")}
