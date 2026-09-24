@@ -4,7 +4,7 @@ import WorkoutLibrary from "@/components/WorkoutLibrary";
 import { ArrowRight } from "lucide-react";
 import { Workout } from "@/context/WorkoutContext";
 
-export const revalidate = 3600; // revalidate at most every hour
+export const dynamic = 'force-dynamic';
 
 async function getWorkouts(): Promise<Workout[]> {
   const res = await fetch("https://api.abcz.workers.dev/api/fitlog");

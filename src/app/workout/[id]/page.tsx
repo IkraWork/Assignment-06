@@ -5,7 +5,7 @@ import { ArrowLeft } from "lucide-react";
 import WorkoutActionButtons from "@/components/WorkoutActionButtons";
 import { Workout } from "@/context/WorkoutContext";
 
-export const revalidate = 3600;
+export const dynamic = 'force-dynamic';
 
 async function getWorkout(id: string): Promise<Workout | null> {
   const res = await fetch(`https://api.abcz.workers.dev/api/fitlog/${id}`);
