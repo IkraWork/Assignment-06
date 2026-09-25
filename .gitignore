@@ -39,5 +39,3 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
-B14-A6-Fit-Log-main/
-!.gitignore
